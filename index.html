@@ -21,14 +21,17 @@
   <style>
     body { margin:0; padding:0; }
     #map { position: absolute; top:0; bottom:0; right:0; left:0; }
-    h1 { position: relative; z-index: 1; }
+    #legend {width: auto; height: auto; z-index: 999; background-color: white; }
+    h1 { position: relative; z-index: 999; font-family: Helvetica; }
   </style>
 
 </head>
 <body>
 
   <!-- Insert HTML division tag to layout the map -->
-  <h1>Mapping Medieval Gotland</h1>
+  <div id="legend">
+    <h1>Mapping Medieval Gotland</h1>
+  </div>
   <div id="map"></div>
  
   <!-- Insert Javascript (.js) code to create the map -->
