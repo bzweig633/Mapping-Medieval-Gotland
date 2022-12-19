@@ -67,9 +67,9 @@
 
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
-  // marker clusters
+ // marker clusters
  var markers = L.markerClusterGroup();
- //var markers1 = L.markerClusterGroup();   
+ var markers1 = L.markerClusterGroup();   
     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
@@ -90,18 +90,18 @@
       //  opacity: 1
       //}).bindPopup(row.Workshop);
       
-      Places.addTo(map);
+      //Places.addTo(map);
       markers.addLayer(Places);
       
       //Workshops.addTo(map);
-      //markers1.addLayer(Workshops);
+      markers1.addLayer(Workshops);
       
     }
 
   });
     
   map.addLayer(markers);  
-  //map.addLayer(markers1);
+  map.addLayer(markers1);
     
   </script>
 </body>
