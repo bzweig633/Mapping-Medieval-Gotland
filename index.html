@@ -93,17 +93,15 @@
       //Places.addTo(map);
       markers.addLayer(Places);
       
-      Workshops.addTo(map);
+      //Workshops.addTo(map);
       //markers1.addLayer(Workshops);
-   
-      controlLayers.addOverlay(Places, "Churches"); 
       
     }
 
   });
     
-  map.addLayer(markers);  
-  //map.addLayer(markers1);
+  map.addLayer(markers);
+  controlLayer.addOverlay(markers, "Churches")
        
   </script>
 </body>
