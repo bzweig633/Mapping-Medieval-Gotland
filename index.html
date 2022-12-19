@@ -86,22 +86,22 @@
         opacity: 1
       }).bindPopup(row.Title);
       
-      var Workshops = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1
-      }).bindPopup(row.Workshop);
+      //var Workshops = L.marker([row.Latitude, row.Longitude], {
+      //  opacity: 1
+      //}).bindPopup(row.Workshop);
       
       //Places.addTo(map);
       markers.addLayer(Places);
       
       //Workshops.addTo(map);
-      markers1.addLayer(Workshops);
+      //markers1.addLayer(Workshops);
       
     }
 
   });
     
   map.addLayer(markers);  
-  map.addLayer(markers1);
+  //map.addLayer(markers1);
     
   </script>
 </body>
