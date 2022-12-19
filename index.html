@@ -47,6 +47,12 @@
     tap: false
   });
 
+  /* Control panel to display map layers */
+  var controlLayers = L.control.layers(null, null, {
+    position: "topright",
+    collapsed: false
+  }).addTo(map);
+    
   // display Carto basemap tiles with light features and labels
   var light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
@@ -63,6 +69,7 @@
 
   // marker clusters
  var markers = L.markerClusterGroup();
+ var markers1 = L.markerClusterGroup();   
     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
@@ -75,30 +82,25 @@
     for (var i in data) {
       var row = data[i];
 
-      var marker_1 = L.marker([row.Latitude, row.Longitude], {
+      var Places = L.marker([row.Latitude, row.Longitude], {
         opacity: 1
       }).bindPopup(row.Title);
       
-      var marker_2 = L.marker([row.Latitude, row.Longtidue], {
-        opacity: 1}).bindPopup(row.Workshop);
+      var Workshops = L.marker([row.Latitude, row.Longtidue], {
+        opacity: 1
+      }).bindPopup(row.Workshop);
       
-      marker_1.addTo(map);
+      Places.addTo(map);
       markers.addLayer(marker_1);
       
-      marker_2.addTo(map);
+      Workshops.addTo(map);
       markers.addLayer(marker_2);
       
     }
 
   });
     
-  map.addLayer(markers);  
-
-  /* Control panel to display map layers */
-  var controlLayers = L.control.layers(marker_1, marker_2, {
-    position: "topright",
-    collapsed: false
-  }).addTo(map);
+  map.addLayer(markers, markers1);  
     
   </script>
 </body>
