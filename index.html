@@ -48,7 +48,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( null, null, {
+  var controlLayers = L.control.layers( marker_1, marker_2, {
     position: "topright",
     collapsed: false
   }).addTo(map);
@@ -67,7 +67,7 @@
 
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
-     // marker clusters
+  // marker clusters
  var markers = L.markerClusterGroup();
     
   // Read markers data from data.csv
@@ -81,12 +81,19 @@
     for (var i in data) {
       var row = data[i];
 
-      var marker = L.marker([row.Latitude, row.Longitude], {
+      var marker_1 = L.marker([row.Latitude, row.Longitude], {
         opacity: 1
       }).bindPopup(row.Title);
       
-      // marker.addTo(map);
-      markers.addLayer(marker);
+      var marker_2 = L.marker([row.Latitude, row.Longtidue], {
+        opacity: 1}).bindPopup(row.Workshop);
+      
+      marker_1.addTo(map);
+      markers.addLayer(marker_1);
+      
+      marker_2.addTo(map);
+      markers.addLayer(marker_2);
+      
     }
 
   });
