@@ -69,7 +69,7 @@
 
   // marker clusters
  var markers = L.markerClusterGroup();
- var markers1 = L.markerClusterGroup();   
+ //var markers1 = L.markerClusterGroup();   
     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
@@ -86,9 +86,9 @@
         opacity: 1
       }).bindPopup(row.Title);
       
-      var Workshops = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1
-      }).bindPopup(row.Workshop);
+      //var Workshops = L.marker([row.Latitude, row.Longitude], {
+      //  opacity: 1
+      //}).bindPopup(row.Workshop);
       
       Places.addTo(map);
       markers.addLayer(Places);
