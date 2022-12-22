@@ -1,7 +1,7 @@
 # Mapping Medieval Gotland
 A GIS Project Mapping the Medieval Art and Architecture on the Swedish Island of Gotland.
 
-Customized map using template provdided by HandsOnDataViz: https://handsondataviz.github.io/leaflet-map-csv/
+Customized map using template provided by HandsOnDataViz: https://handsondataviz.github.io/leaflet-map-csv/
 
 For more information on customization, see [Leaflet documentation](https://leafletjs.com/).
 
