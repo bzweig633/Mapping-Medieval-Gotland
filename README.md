@@ -5,9 +5,6 @@ Customized map using template provided by HandsOnDataViz: https://handsondataviz
 
 For more information on customization, see [Leaflet documentation](https://leafletjs.com/).
 
-## HandsOnDataViz Tutorial
-https://handsondataviz.org/leaflet-maps-with-csv.html
-
 ## See other Leaflet templates
 * [Simple Leaflet map](https://github.com/HandsOnDataViz/leaflet-map-simple)
 * [Leaflet map with open data APIs](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis)
