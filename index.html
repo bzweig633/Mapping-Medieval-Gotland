@@ -70,6 +70,15 @@
  // marker clusters
  var markers = L.markerClusterGroup();
  var markers1 = L.markerClusterGroup();   
+ 
+ //custom marker
+ var mmgIcon = L.icon({
+ iconURL:'',
+   
+ iconSize: [38, 95],
+ iconAnchor: [22, 94],
+ popUpAnchor: [4, 62]  
+ });   
     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
