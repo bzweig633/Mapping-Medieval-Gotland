@@ -91,8 +91,7 @@
     for (var i in data) {
       var row = data[i];
 
-      var Places = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1}, {icon: mmgIcon
+      var Places = L.marker([row.Latitude, row.Longitude], {icon: mmgIcon
       }).bindPopup(row.Title);
       
       var Workshops = L.marker([row.Latitude, row.Longitude], {
