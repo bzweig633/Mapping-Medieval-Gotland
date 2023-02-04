@@ -80,7 +80,7 @@
  popupAnchor: [4, 62]  
  });   
  
- L.marker({icon: mmgIcon});   
+ L.marker({icon: mmgIcon}).addTo(map);   
     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
