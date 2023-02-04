@@ -79,9 +79,7 @@
  iconAnchor: [22, 94],
  popupAnchor: [4, 62]  
  });   
- 
- L.marker({icon: mmgIcon}).addTo(map);   
-    
+     
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
 
@@ -94,7 +92,7 @@
       var row = data[i];
 
       var Places = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1
+        opacity: 1}, {icon: mmgIcon
       }).bindPopup(row.Title);
       
       var Workshops = L.marker([row.Latitude, row.Longitude], {
