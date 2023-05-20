@@ -68,7 +68,9 @@
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
  // marker clusters
- var markers = L.markerClusterGroup();
+ var markers = L.markerClusterGroup({
+      showCoverageOnHover: false
+       });
  var markers1 = L.markerClusterGroup();   
  
  //custom marker
