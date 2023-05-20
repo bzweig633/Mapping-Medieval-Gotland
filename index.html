@@ -69,7 +69,11 @@
 
  // marker clusters
  var markers = L.markerClusterGroup({
-      showCoverageOnHover: false
+      polygonOptions: {
+      color: "yellow",
+      fill: "red",
+      weight: 1  
+      }
        });
  var markers1 = L.markerClusterGroup();   
  
