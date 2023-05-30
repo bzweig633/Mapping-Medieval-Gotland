@@ -117,7 +117,7 @@
   map.addLayer(markers);
   controlLayers.addOverlay(markers, "Churches");
    
-  map.on('click', 
+  map.on('dblclick', 
           function(e){
             var coord = e.latlng.toString().split(',');
             var lat = coord[0].split('(');
@@ -126,7 +126,7 @@
 
           map.flyTo([lat[1], lng[0]], 10, {
             animate: true,
-            duration: 2 // in seconds
+            duration: 1.5 // in seconds
           });  
   });
     
