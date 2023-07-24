@@ -47,6 +47,8 @@
     tap: false
   });
 
+  map.setMaxBounds(map.getBounds());
+    
   /* Control panel to display map layers */
   var controlLayers = L.control.layers(null, null, {
     position: "topright",
