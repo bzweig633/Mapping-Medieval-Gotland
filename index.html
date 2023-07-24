@@ -41,9 +41,9 @@
 
   // Set up initial map center and zoom level
   
-    var southWest = L.latLng(56.7, 19),
-    northEast = L.latLng(58.774, 19),
-    bounds = L.latLngBounds(southWest, northEast);
+    var southWest = L.LatLng(56.7, 19),
+    northEast = L.LatLng(58.774, 19),
+    bounds = L.LatLngBounds(southWest, northEast);
     
     var map = L.map('map', {
     center: [57.468, 18.4867], // EDIT latitude, longitude to re-center map
