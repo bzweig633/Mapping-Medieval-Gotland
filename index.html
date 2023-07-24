@@ -41,19 +41,18 @@
 
   // Set up initial map center and zoom level
   
-    var southWest = L.LatLng(56.768, 19.852),
-    northEast = L.LatLng(58.774, 19.258),
-    bounds = L.LatLngBounds(southWest, northEast);
-    
     var map = L.map('map', {
     center: [57.468, 18.4867], // EDIT latitude, longitude to re-center map
     minZoom: 8,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     maxZoom: 18,
-    maxBounds: bounds,  
+    maxBounds: [
+      [50.123, 15.123],
+      [60.999, 20.999]
+    ],
     scrollWheelZoom: false,
     tap: false,
   });
-    
+
   /* Control panel to display map layers */
   var controlLayers = L.control.layers(null, null, {
     position: "topright",
